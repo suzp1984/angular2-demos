@@ -7,7 +7,7 @@ import { Router } from '@angular/router-deprecated';
 
 @Component({
     selector: 'my-heroes',
-    styleUrls: ['app/heroes.component.css']
+    styleUrls: ['app/heroes.component.css'],
     templateUrl: 'app/heroes.component.html',
     directives: [HeroDetailComponent],
     providers: [HeroService]
@@ -18,6 +18,8 @@ export class HeroesComponent implements OnInit {
         this.getHeroes();
     };
     title = 'Tour of Heroes';
+    addingHero;
+    error;
     heroes: Hero[];
     selectedHero: Hero;
     onSelect(hero: Hero) { this.selectedHero = hero; };
