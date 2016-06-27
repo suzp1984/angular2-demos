@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Phone } from './phone';
-import { PHONES } from './mock-phone';
+import { PHONES } from './mock-phones';
 
 import 'rxjs/add/operator/toPromise';
 
