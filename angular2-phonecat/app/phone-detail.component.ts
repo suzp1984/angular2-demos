@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { RouteParams } from '@angular/router-deprecated';
 import { PhoneService } from './phone.service';
+import { Phone } from './phone';
 
 @Component({
     selector: 'phone-detail',
@@ -11,6 +12,9 @@ import { PhoneService } from './phone.service';
 
 export class PhoneDetailComponent {
     title = "Angular2 Phone Detail";
+
+    @Input()
+    phone: Phone;
     
     constructor(private routeParams: RouteParams,
                 private phoneService: PhoneService) {
@@ -21,6 +25,7 @@ export class PhoneDetailComponent {
             let id = this.routeParams.get('id');
 
             // get id from phone.service
+            phone = this.phoneService.getPhone(id);
         }
     }
 };
