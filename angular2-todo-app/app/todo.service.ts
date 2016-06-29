@@ -4,7 +4,7 @@ import { Todo } from './todo';
 @Injectable()
 export class TodoService {
 
-    todos:[Todo] = [
+    todos: Todo[] = [
         new Todo("eat"),
         new Todo("sleep"),
         new Todo("code"),
@@ -15,7 +15,7 @@ export class TodoService {
     ];
     
     getTodos() {
-        return todos;
+        return this.todos;
     }
 
     addTodo(todo:Todo) {
