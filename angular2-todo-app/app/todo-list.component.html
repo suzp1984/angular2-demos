@@ -1,0 +1,11 @@
+<ul>
+  <li *ngFor="let todo of todoService.todos | started:status | search : term">
+    <todo-item [todo]='todo'
+               (toggle)="todoService.toggleTodo($event)"></todo-item>
+    <!--
+    <span [ngClass]="todo.status">{{todo.title}}</span>
+    <button (click)="toggle(todo)">toggle</button>
+    -->
+  </li>
+  
+</ul>
