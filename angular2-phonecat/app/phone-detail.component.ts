@@ -25,7 +25,8 @@ export class PhoneDetailComponent {
             let id = this.routeParams.get('id');
 
             // get id from phone.service
-            phone = this.phoneService.getPhone(id);
+            this.phoneService.getPhone(id).then(phone => this.phone = phone);
+                                             
         }
     }
 };
