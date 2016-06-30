@@ -5,7 +5,7 @@
 
       Search: <input type="text" (input)="term = $event.target.value">
       Sort by:
-      <select ([ng-model])="orderProp">
+      <select (change)="orderProp = $event.target.value">
         <option value="name">Alphabetical</option>
         <option value="age">Newest</option>
       </select>
@@ -15,7 +15,7 @@
       <!--Body content-->
 
       <ul class="phones">
-        <li *ngFor="let phone of phones | search: term"
+        <li *ngFor="let phone of phones | search: term | orderBy: orderProp"
             class="thumbnail phone-listing">
           <a href="/phone/{{phone.id}}" class="thumb"><img src="{{phone.imageUrl}}"></a>
           <a href="/phone/{{phone.id}}">{{phone.name}}</a>
