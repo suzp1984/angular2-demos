@@ -4,6 +4,7 @@ import { Comment } from './comment';
 
 @Component({
     selector: 'comment-avatar-list',
+    styleUrls: ['app/comment-avatar-list.component.css'],
     templateUrl: 'app/comment-avatar-list.component.html',
     providers: [CommentService]
 })
