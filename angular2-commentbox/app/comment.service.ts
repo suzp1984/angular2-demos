@@ -17,5 +17,10 @@ export class CommentService {
 
     addComment(c : Comment) {
         this.comments = [...this.comments, c];
+        console.log(this.comments);
+    }
+
+    getCommentsLength(): number {
+        return this.comments.length;
     }
 }

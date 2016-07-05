@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/common';
 import { CommentService } from './comment.service';
+import { Comment } from './comment';
 
 @Component({
     selector: 'comment-form',
@@ -10,6 +12,20 @@ import { CommentService } from './comment.service';
 
 
 export class CommentFormComponent {
+    
+    author : string = "";
+    body : string = "";
+    model : Comment;
+    
     constructor(public commentService: CommentService) {
+    }
+
+    onSubmit() {
+        console.log(this.author);
+        console.log(this.body);
+        this.model = new Comment(this.commentService.getCommentsLength() + 1, this.author, this.body, "");
+        this.commentService.addComment(this.model);
+        this.author = "";
+        this.body = "";
     }
 }
