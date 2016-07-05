@@ -1,0 +1,39 @@
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.article-title {
+    border-bottom: 3px solid #6ba2aa;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+p {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.article {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.cell {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+blockquote {
+    color: #999;
+    font-size: 18px;
+    font-style: italic;
+}
