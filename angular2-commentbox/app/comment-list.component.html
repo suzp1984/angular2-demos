@@ -1,0 +1,10 @@
+<div class="comment-list" *ngFor="let comment of comments">
+  <div class="comment">
+
+    <img src={{comment.avatarUrl}} alt="{{comment.author}}'s picture" />
+    <p class="comment-header">{{comment.author}}</p>
+    <p class="comment-body">{{comment.body}}</p>
+
+    
+  </div>
+</div>
