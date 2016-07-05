@@ -23,7 +23,7 @@ export class CommentFormComponent {
     onSubmit() {
         console.log(this.author);
         console.log(this.body);
-        this.model = new Comment(this.commentService.getCommentsLength() + 1, this.author, this.body, "");
+        this.model = new Comment(this.commentService.getCommentsLength() + 1, this.author, this.body, "assets/images/avatars/avatar-default.png");
         this.commentService.addComment(this.model);
         this.author = "";
         this.body = "";
