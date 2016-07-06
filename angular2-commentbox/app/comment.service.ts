@@ -15,6 +15,10 @@ export class CommentService {
         return Promise.resolve(this.comments);
     }
 
+    getCommentsDirect(): Comment[] {
+        return [...this.comments];
+    }
+
     addComment(c : Comment) {
         this.comments = [...this.comments, c];
         console.log(this.comments);

@@ -1,3 +1,6 @@
+<!-- <h3 className="comment-count" *ngIf="comments.length > 0">{{ comments }} comments</h3>
+-->
+<h3 class="comment-count" *ngIf="comments && comments.length > 0">{{ comments.length }} comments</h3>
 <div class="comment-list" *ngFor="let comment of comments">
   <div class="comment">
 
@@ -5,6 +8,9 @@
     <p class="comment-header">{{comment.author}}</p>
     <p class="comment-body">{{comment.body}}</p>
 
-    
+    <div class="comment-actions">
+      <comment-remove-confirm></comment-remove-confirm>
+      <a href="#" >Report as Abuse</a>
+    </div>
   </div>
 </div>

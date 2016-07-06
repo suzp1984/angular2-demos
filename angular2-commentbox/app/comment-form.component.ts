@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/common';
 import { CommentService } from './comment.service';
 import { Comment } from './comment';
@@ -6,8 +6,8 @@ import { Comment } from './comment';
 @Component({
     selector: 'comment-form',
     styleUrls: ['app/comment-form.component.css'],
-    templateUrl: 'app/comment-form.component.html',
-    providers: [CommentService]
+    templateUrl: 'app/comment-form.component.html'
+    // providers: [CommentService]
 })
 
 
@@ -16,6 +16,9 @@ export class CommentFormComponent {
     author : string = "";
     body : string = "";
     model : Comment;
+
+    @Output()
+    dataSubmit = new EventEmitter();
     
     constructor(public commentService: CommentService) {
     }
@@ -27,5 +30,6 @@ export class CommentFormComponent {
         this.commentService.addComment(this.model);
         this.author = "";
         this.body = "";
+        this.dataSubmit.emit(this.model);
     }
 }

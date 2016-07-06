@@ -1,0 +1,38 @@
+.comment-count {
+    color: #9ecbd2;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.comment-list {
+    margin-top: 40px;
+}
+
+.comment {
+    margin-bottom: 40px;
+}
+
+.comment > img {
+    border: 2px solid #45686D;
+    border-radius: 50%;
+    float: left;
+    height: 64px;
+    width: 64px;
+    margin: 0 10px 0 0;
+}
+
+.comment-header {
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.comment-body {
+    color: #fff;
+}
